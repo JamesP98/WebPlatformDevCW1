@@ -1,13 +1,81 @@
 <head>
     <meta charset="utf-8">
-   <title>{{title}}</title>
-   </head>
-   <body>
+    <title>{{title}}</title>
+</head>
+
+<body>
     <h1>{{title}}</h1>
     <table>
-    <th>
-    Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday
-    </th>
-    </table>   
-    </body>
-   </html>
+        <tr>
+            <th>
+                Monday
+            </th>
+            <th>
+                Tuesday
+            </th>
+            <th>
+                Wednesday
+            </th>
+            <th>
+                Thursday
+            </th>
+            <th>
+                Friday
+            </th>
+            <th>
+                Saturday
+            </th>
+            <th>
+                Sunday
+            </th>
+        </tr>
+        {{#entries}}
+        <tr>
+
+            <td>{{Exercise}}</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+        </tr>
+        <tr>
+
+            <td></td>
+            <td></td>
+            <td>{{Exercise2}}</td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+
+        </tr>
+        <tr>
+
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>{{Exercise3}}</td>
+            <td></td>
+
+        </tr>
+        <tr>
+
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td>{{Exercise4}}</td>
+
+        </tr>
+        {{/entries}}
+    </table>
+</body>
+
+</html>

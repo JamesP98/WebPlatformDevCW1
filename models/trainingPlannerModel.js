@@ -9,39 +9,50 @@ class trainingPlanner {
       this.db = new nedb();
     }
   }
-  
+
   init() {
     this.db.insert({
-     
+      Exercise4: "Get out for a run",
+      Day4: "Sunday",
+      Achievement4: "",
     });
-    //for later debugging
-    console.log("");
-    this.db.insert({
-      });
-    //for later debugging
     console.log("");
 
+    this.db.insert({
+      Exercise3: "Do a workout with a friend over facetime",
+      Day3: "Saturday",
+      Achievement3: "",
+    });
+    console.log("");
+
+    this.db.insert({
+      Exercise2: "Complete an online workout",
+      Day2: "Wednesday",
+      Achievement2: "",
+    });
+    console.log("");
+
+    this.db.insert({
+      Exercise: "Get out for a walk",
+      Day: "Monday",
+      Achievement: "",
+    });
+    console.log("");
   }
-  //a function to return all entries from the database
+
   getAllEntries() {
-    //return a Promise object, which can be resolved or rejected
     return new Promise((resolve, reject) => {
-      //use the find() function of the database to get the data,
-      //error first callback function, err for error, entries for data
       this.db.find({}, function (err, entries) {
-        //if error occurs reject Promise
         if (err) {
           reject(err);
-          //if no error resolve the promise & return the data
         } else {
           resolve(entries);
-          //to see what the returned data looks like
+
           console.log("function all() returns: ", entries);
         }
       });
     });
   }
- 
 }
 
 module.exports = trainingPlanner;

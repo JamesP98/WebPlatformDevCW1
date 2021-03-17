@@ -2,7 +2,7 @@ const express = require("express");
 const controller = require("../controllers/trainingPlannerControllers");
 const router = express.Router();
 
-router.get("/", controller.landing_page)
+router.get("/", controller.landing_page);
 
 router.use(function (req, res) {
   res.status(404);
