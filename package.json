@@ -1,0 +1,32 @@
+{
+  "name": "webplatformdevcw1",
+  "version": "1.0.0",
+  "description": "This project is for the Web Platform Development Coursework 1",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "index.js"
+  },
+  "keywords": [
+    "node.js",
+    "express"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JamesP98/WebPlatformDevCW1.git"
+  },
+  "author": "James Plimbley",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JamesP98/WebPlatformDevCW1/issues"
+  },
+  "homepage": "https://github.com/JamesP98/WebPlatformDevCW1#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mustache": "^4.1.0",
+    "mustache-express": "^1.3.0",
+    "nedb": "^1.8.0",
+    "nodemon": "^2.0.7",
+    "path": "^0.12.7"
+  }
+}
