@@ -33,11 +33,29 @@ class trainingPlanner {
     console.log("");
 
     this.db.insert({
-      Exercise: "Get out for a walk",
-      Day: "Monday",
+      Exercise1: "Get out for a walk",
+      Day1: "Monday",
       Achievement: "",
     });
     console.log("");
+  }
+
+  addEntry(exercise, day, achievement) {
+    var entry = {
+      exercise: exercise,
+      day: day,
+      achievement: achievement,
+      published: new Date().toISOString().split("T")[0],
+    };
+    console.log("entry created", entry);
+
+    this.db.insert(entry, function (err, doc) {
+      if (err) {
+        console.log("Error inserting document", Day);
+      } else {
+        console.log("document inserted into the database", doc);
+      }
+    });
   }
 
   getAllEntries() {

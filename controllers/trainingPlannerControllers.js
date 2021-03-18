@@ -17,6 +17,18 @@ exports.landing_page = function (req, res) {
     });
 };
 
-exports.new_entry = function (req, res) {
-  res.send("");
+exports.show_new_entries = function (req, res) {
+  res.render("newEntry", {
+    title: "Training Planner",
+  });
+};
+
+exports.post_new_entry = function (req, res) {
+  console.log("processing post-new_entry controller");
+  if (!req.body.exercise) {
+    response.status(400).send("You must enter an exercise...");
+    return;
+  }
+  db.addEntry(req.body.exercise, req.body.day, req.body.achievement);
+  res.redirect("/");
 };

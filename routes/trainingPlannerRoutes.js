@@ -3,6 +3,8 @@ const controller = require("../controllers/trainingPlannerControllers");
 const router = express.Router();
 
 router.get("/", controller.landing_page);
+router.get("/new", controller.show_new_entries);
+router.post("/new", controller.post_new_entry);
 
 router.use(function (req, res) {
   res.status(404);
